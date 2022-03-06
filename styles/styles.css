@@ -1,0 +1,109 @@
+.advice-generator {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.advice-generator .card {
+  position: relative;
+  background-color: #4e5d73;
+  width: 90%;
+  max-width: 30rem;
+  min-height: 22rem;
+  padding: 3rem 2rem 4rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.advice-generator .card .advice-id {
+  color: #52ffa8;
+  font-size: 0.75rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+}
+.advice-generator .card .advice-text {
+  color: #cee3e9;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  text-align: center;
+  line-height: 1.5;
+}
+.advice-generator .card .divider-desktop {
+  display: none;
+}
+.advice-generator .card .btn {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color: #52ffa8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  bottom: 0;
+  transform: translateY(50%);
+  cursor: pointer;
+}
+.advice-generator .card .btn:hover {
+  box-shadow: 0 0 20px #52ffa8;
+}
+.advice-generator .card .btn:disabled {
+  background-color: #4e5d73;
+  box-shadow: none;
+  cursor: wait;
+}
+.advice-generator .card .btn .bounce {
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-1rem) rotate(180deg);
+  }
+  60% {
+    transform: translateY(-0.5rem);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-1rem) rotate(180deg);
+  }
+  60% {
+    transform: translateY(-0.5rem);
+  }
+}
+@media screen and (min-width: 769) {
+  .divider-desktop {
+    display: block;
+  }
+
+  .divider-mobile {
+    display: none;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-weight: 800;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #323a49;
+}/*# sourceMappingURL=styles.css.map */
